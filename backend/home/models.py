@@ -47,3 +47,12 @@ class Message(models.Model):
         on_delete=models.CASCADE,
         related_name="message_inbox",
     )
+
+
+class Events(models.Model):
+    "Generated Model"
+    field1 = models.CharField(max_length=50,)
+    on_off = models.BooleanField()
+    profile = models.ForeignKey(
+        "dating.Profile", on_delete=models.CASCADE, related_name="events_profile",
+    )
